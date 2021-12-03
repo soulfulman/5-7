@@ -1,0 +1,93 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+//struct S
+//{
+//	int n;
+//	int arr[];//柔性数组成员
+//};
+//int main()
+//{
+//	/*printf("%d\n", sizeof(struct S));*/
+//	int i = 0;
+//	struct S* p=(struct S*)malloc(sizeof(struct S) + 10 * sizeof(int));
+//	p->n = 100;
+//	for (i = 0; i < 10; i++)
+//	{
+//		p->arr[i]=i;
+//
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", p->arr[i]);
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//
+//}
+//文件操作
+//int main()
+//{
+//	//..表示上一级路径
+//	//.表示当前路径
+//	fopen("test.txt", "r");//打开文件 相对路径
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	//打开成功
+//	//读文件
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+//int  main()
+//{
+//	FILE* pfWrite = fopen("test.txt", "w");
+//	if (pfWrite == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//	}
+//	fputc('b', pfWrite);
+//	fputc('i', pfWrite);
+//	fputc('t', pfWrite);
+//	fclose(pfWrite);
+//	pfWrite = NULL;
+//	return 0;
+//}
+//int main()
+//{
+//	int ch = fgetc(stdin);
+//	fputc(ch, stdout);
+//	return 0;
+//}
+//int main()
+//{
+//	char buf[1024] = { 0 };
+//	FILE* pf = fopen("test.txt", "w");
+//	if (pf == NULL)
+//	{
+//		return 0;
+//	}
+//	fputs("hello\n", pf);
+//	fputs("world\n", pf);
+//	/*fgets(buf, 1024, pf);
+//	printf("%s", buf);*/
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+int main()
+{
+	//从键盘读取一行文本信息
+	char buf[1024]={0};
+	fgets(buf, 1024, stdin);//从标准输入读取
+	fputs(buf, stdout);//输出到标准输出流
+	return 0;
+}
